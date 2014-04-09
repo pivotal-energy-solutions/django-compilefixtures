@@ -48,7 +48,7 @@ class Command(BaseCommand):
         return os.path.isfile(self._get_module_path(app))
 
     def _get_fixture_compilers(self, module):
-        from apps.core.tests.fixturecompilers import BaseFixtureCompiler
+        from ...fixturecompilers import BaseFixtureCompiler
         compilers = []
         for name in dir(module):
             item = getattr(module, name)
